@@ -1,6 +1,7 @@
 ---
 date: "2023-11-03T21:30:00Z"
 title: Goldilocks makes a website
+layout: post
 ---
 
 It's not commonly part of the story, but while at the three bears house, Goldilocks tried to make a website.

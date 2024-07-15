@@ -1,6 +1,7 @@
 ---
 date: "2023-09-17T13:46:44Z"
 title: Death of a SPAlesman
+layout: post
 ---
 
 This is a presentation I gave to a local meetup group about the "death" of single page apps. As I have worked on single page apps for 10 years, this topic is relevant to me and the work I will do in the future. The topic was inspired by a tweet from a prominent developer.

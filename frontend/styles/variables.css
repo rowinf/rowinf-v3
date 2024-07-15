@@ -1,7 +1,7 @@
 @import "open-props/open-props.min.css";
 
 /* Uncomment this if you want addiitonal "default" styles applied: */
-/* @import "open-props/normalize.min.css"; */
+@import "open-props/normalize.min.css"; 
 
 :root {
   /* Define additional variables here. */

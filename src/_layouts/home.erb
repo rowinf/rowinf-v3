@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="<%= site.locale %>">
+  <head>
+    <%= render "head", metadata: site.metadata, title: data.title %>
+  </head>
+  <body class="<%= data.layout %> <%= data.page_class %>">
+
+    <header>
+      <section class="hero">
+        <h1 class="hero-message">
+          <div>Welcome to Rob's</div>
+          <div>Awesome Website</div>
+        </h1>
+        <p class="under-hero">A site dedicated to Rob's awesome opinions. You will want to hear what this guy says, believe me</p>
+        <div class="button-list">
+          <button class="primary" type="button">Posts</button>
+          <button type="button">About</button>
+        </div>
+      </section>
+      <picture class="promo-art">
+        <img src="images/penn-quarter.avif" width="700" alt="penn quarter">
+      </picture>
+    </header>
+    <main>
+      <%= yield %>
+      <ul>
+        <% collections.posts.resources.each do |post| %>
+          <li>
+            <a href="<%= post.relative_url %>"><%= post.data.title %></a>
+          </li>
+        <% end %>
+      </ul> 
+    </main>
+    
+    <%= render "footer", metadata: site.metadata %>
+  </body>
+</html>

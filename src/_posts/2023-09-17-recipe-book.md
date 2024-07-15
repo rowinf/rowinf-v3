@@ -1,6 +1,7 @@
 ---
 date: "2023-09-17T09:46:44Z"
 title: Recipe book
+layout: post
 ---
 
 This is a simple static website with recipes I've collected over some years. I find it useful to refer back to a favorite recipe without having to go through the trouble of bookmarks or finding websites again.

@@ -1,6 +1,7 @@
 ---
 date: "2023-09-17T12:46:44Z"
 title: There and back again
+layout: post
 ---
 
 This is a contest entry to Stats NZ for data visualisation of transport commuter data back in 2020. It uses Mapbox and React to display commuter travel habits. The data included where they generally travel for work, from where, and what mode of transport they use.
