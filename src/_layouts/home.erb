@@ -23,13 +23,35 @@
     </header>
     <main>
       <%= yield %>
-      <ul>
-        <% collections.posts.resources.each do |post| %>
-          <li>
-            <a href="<%= post.relative_url %>"><%= post.data.title %></a>
-          </li>
-        <% end %>
-      </ul> 
+      <section class="cards">
+        <div class="card">
+          <img src="https://doodleipsum.com/500x500/hand-drawn?i=b48528b59f8d071fde57e51d2d6c433d" alt="Card image cap">
+          <h5>Lorem ipsum dolor</h5>
+          <p>Quis nostrud nisi ut aliquip ea commodo consequat.</p>
+          <a href="#">Check it</a>
+        </div>
+        
+        <div class="card">
+          <img src="https://doodleipsum.com/500x500/hand-drawn?i=9b11b7fde5591be86d8928901e68355f" alt="Card image cap">
+          <h5>Consectetur adipiscing elit</h5>
+          <p>Duis aute irure dolor in  cillum dolore eu.</p>
+          <a href="#">Check it</a>
+        </div>
+        
+        <div class="card">
+          <img class="card-img" src="https://doodleipsum.com/500x500/hand-drawn?i=74c909f45ddde824d103db53e2a71e63" alt="Card image cap">
+          <h5>Ut enim</h5>
+          <p>Excepteur sint occaecat cupidatat non proident.</p>
+          <a href="#">Ready for action</a>
+        </div>
+        <ul>
+          <% collections.posts.resources.each do |post| %>
+            <li>
+              <a href="<%= post.relative_url %>"><%= post.data.title %></a>
+            </li>
+          <% end %>
+        </ul>
+      </section>
     </main>
     
     <%= render "footer", metadata: site.metadata %>

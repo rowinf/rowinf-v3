@@ -53,7 +53,6 @@ header:has(.hero) {
 .hero-message {
   display: grid;
   grid-template-columns: max-content;
-  color: var(--gray-9);
   line-height: var(--font-lineheight-0);
 }
 
@@ -62,7 +61,6 @@ header:has(.hero) {
 }
 
 .under-hero {
-  color: var(--gray-7);
   font-size: var(--font-size-4);
   margin-block-end: var(--size-3);
 }
@@ -102,4 +100,35 @@ button.primary:hover {
   object-position: 213%;
   width: 100%;
   min-width: 450px;
+}
+
+section.cards {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: space-around;
+  max-inline-size: calc(var(--size-content-2) * 4);
+  gap: var(--size-5);
+  padding: var(--size-5);
+}
+
+.card {
+  flex-basis: var(--size-content-2);
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-1);
+  background: var(--surface-3);
+  border: 1px solid var(--surface-1);
+  padding: var(--size-4);
+  border-radius: var(--radius-3);
+  box-shadow: var(--shadow-2);
+}
+
+.card > h5 {
+  line-height: var(--font-lineheight-1);
+}
+
+body {
+  display: grid;
+  place-content: center;
 }
