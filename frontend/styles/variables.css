@@ -2,10 +2,31 @@
 
 /* Uncomment this if you want addiitonal "default" styles applied: */
 @import "open-props/normalize.min.css"; 
+@import "open-props/buttons.min.css"; 
 
 :root {
   /* Define additional variables here. */
 
   /* You can use variables from Open Props in your own custom properties. */
   --color-medium-gray: var(--gray-7);
+
+  --accent: var(--yellow-6);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --link: var(--indigo-3);
+    --link-visited: var(--purple-3);
+    --text-1: var(--gray-1);
+    --text-2: var(--gray-4);
+    --surface-1: var(--gray-9);
+    --surface-2: var(--gray-8);
+    --surface-3: var(--gray-7);
+    --surface-4: var(--gray-6);
+    --scrollthumb-color: var(--gray-6);
+    --accent: var(--yellow-10);
+    --shadow-strength: 10%;
+    --shadow-color: 220 40% 2%;
+    color-scheme: dark;
+  }
 }

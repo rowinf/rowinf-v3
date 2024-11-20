@@ -4,53 +4,28 @@
     <%= render "head", metadata: site.metadata, title: data.title %>
   </head>
   <body class="<%= data.layout %> <%= data.page_class %>">
-
     <header>
       <section class="hero">
         <h1 class="hero-message">
-          <div>Welcome to Rob's</div>
-          <div>Awesome Website</div>
+          <div>Web Developer</div>
+          <strong>For Hire</strong>
         </h1>
-        <p class="under-hero">A site dedicated to Rob's awesome opinions. You will want to hear what this guy says, believe me</p>
+        <p class="under-hero">This is the website of github user rowinf</p>
         <div class="button-list">
-          <button class="primary" type="button">Posts</button>
-          <button type="button">About</button>
+          <a href="/posts" class="btn">Posts</a>
+          <a href="/about" class="btn">About</a>
         </div>
       </section>
-      <picture class="promo-art">
-        <img src="images/penn-quarter.avif" width="700" alt="penn quarter">
-      </picture>
+      <figure class="promo-art">
+        <img src="images/hannah-grace-UW6fmtQtvjM-unsplash.jpg" height="400" width="700" alt="a random doodle">
+        <figcaption>
+          Photo by <a href="https://unsplash.com/@oddityandgrace?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">hannah grace</a> on <a href="https://unsplash.com/photos/foggy-weather-with-trees-UW6fmtQtvjM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+        </figcaption>
+      </figure>
     </header>
     <main>
-      <%= yield %>
-      <section class="cards">
-        <div class="card">
-          <img src="https://doodleipsum.com/500x500/hand-drawn?i=b48528b59f8d071fde57e51d2d6c433d" alt="Card image cap">
-          <h5>Lorem ipsum dolor</h5>
-          <p>Quis nostrud nisi ut aliquip ea commodo consequat.</p>
-          <a href="#">Check it</a>
-        </div>
-        
-        <div class="card">
-          <img src="https://doodleipsum.com/500x500/hand-drawn?i=9b11b7fde5591be86d8928901e68355f" alt="Card image cap">
-          <h5>Consectetur adipiscing elit</h5>
-          <p>Duis aute irure dolor in  cillum dolore eu.</p>
-          <a href="#">Check it</a>
-        </div>
-        
-        <div class="card">
-          <img class="card-img" src="https://doodleipsum.com/500x500/hand-drawn?i=74c909f45ddde824d103db53e2a71e63" alt="Card image cap">
-          <h5>Ut enim</h5>
-          <p>Excepteur sint occaecat cupidatat non proident.</p>
-          <a href="#">Ready for action</a>
-        </div>
-        <ul>
-          <% collections.posts.resources.each do |post| %>
-            <li>
-              <a href="<%= post.relative_url %>"><%= post.data.title %></a>
-            </li>
-          <% end %>
-        </ul>
+      <section>
+        <%= yield %>
       </section>
     </main>
     

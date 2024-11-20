@@ -1,5 +1,3 @@
-import "$styles/index.scss"
-import "$styles/syntax-highlighting.css"
 import * as Turbo from "@hotwired/turbo"
 
 /**

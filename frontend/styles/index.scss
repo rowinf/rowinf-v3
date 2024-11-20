@@ -1,7 +1,5 @@
 @import "variables.css";
 
-:root {
-}
 h1,h2,h3,h4,h5,h6 {
   font-family: var(--font-transitional);
 }
@@ -26,15 +24,32 @@ header > nav a {
 
 main {
   min-height: calc(100vh - 200px);
-  box-shadow: var(--shadow-2);
   display: grid;
-  place-items: center;
+  justify-content: center;
+  align-content: start;
+  section {
+    margin: var(--size-fluid-4);
+  }
 }
 
 footer {
-  text-align: center;
-  margin-bottom: 4rem;
-  font-size: 1em;
+  display: grid;
+  place-items: center;
+  background-color: var(--surface-4);
+  section {
+    margin: var(--size-fluid-2);
+    text-align: center;
+    margin-bottom: 4rem;
+    font-size: 1em;
+  }
+}
+
+header figure figcaption {
+  position: absolute;
+  padding: var(--size-1);
+  bottom: var(--size-7);
+  right: 0;
+  background: var(--surface-1);
 }
 
 header:has(.hero) {
@@ -54,15 +69,9 @@ header:has(.hero) {
   display: grid;
   grid-template-columns: max-content;
   line-height: var(--font-lineheight-0);
-}
-
-.hero-message > div:last-child {
-  color: var(--indigo-7);
-}
-
-.under-hero {
-  font-size: var(--font-size-4);
-  margin-block-end: var(--size-3);
+  strong {
+    color: var(--accent);
+  }
 }
 
 .button-list {
@@ -70,65 +79,19 @@ header:has(.hero) {
   gap: var(--size-3);
 }
 
-button {
-  background: white;
-  color: var(--indigo-8);
-  font-size: var(--font-size-3);
-  padding-inline: var(--size-8);
-  padding-block: var(--size-3);
-  border-radius: var(--radius-2);
-  box-shadow: var(--shadow-2);
+html[data-turbo-visit-direction="forward"]::view-transition-new(root) {
+  opacity: 0;
+  animation: var(--animation-fade-in);
 }
 
-button.primary {
-  background: var(--indigo-8);
-  text-shadow: 0 1px 0 var(--indigo-9);
-  color: white;
+a.btn:hover {
+  text-decoration: none;
 }
 
-button.primary:hover {
-  background: var(--indigo-7);
-}
-
-.promo-art {
-  align-self: stretch;
-}
-
-.promo-art > img {
-  block-size: 636px;
-  object-fit: cover;
-  object-position: 213%;
-  width: 100%;
-  min-width: 450px;
-}
-
-section.cards {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: flex-start;
-  justify-content: space-around;
-  max-inline-size: calc(var(--size-content-2) * 4);
-  gap: var(--size-5);
-  padding: var(--size-5);
-}
-
-.card {
-  flex-basis: var(--size-content-2);
-  display: flex;
-  flex-direction: column;
-  gap: var(--size-1);
-  background: var(--surface-3);
-  border: 1px solid var(--surface-1);
-  padding: var(--size-4);
-  border-radius: var(--radius-3);
-  box-shadow: var(--shadow-2);
-}
-
-.card > h5 {
-  line-height: var(--font-lineheight-1);
-}
-
-body {
-  display: grid;
-  place-content: center;
+a.icon {
+  svg {
+    inline-size: var(--size-5);
+    block-size: var(--size-5);
+    fill: var(--text-1);
+  }
 }

@@ -1,0 +1,5 @@
+{
+    "css.customData": [
+        "./node_modules/open-props/open-props.min.css"
+    ]
+}

@@ -1,9 +1,7 @@
-<header>
-  <nav>
-    <ul>
-      <li><a href="<%= relative_url '/' %>">Home</a></li>
-      <li><a href="<%= relative_url '/about' %>">About</a></li>
-      <li><a href="<%= relative_url '/posts' %>">Posts</a></li>
-    </ul>
-  </nav>
-</header>
+<nav>
+  <ul>
+    <li><%= link_to "Home", "/", current_page?(@resource.relative_url, "/") %></li>
+    <li><%= link_to "About", "/about", current_page?(@resource.relative_url, "/about") %></li>
+    <li><%= link_to "Posts", "/posts", current_page?(@resource.relative_url, "/posts") %></li>
+  </ul>
+</nav>
